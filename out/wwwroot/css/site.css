@@ -1,0 +1,173 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    gap: 20px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* On top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* semi-transparent background */
+}
+
+.modal-content {
+    position: absolute; /* must be absolute for dragging */
+    top: 100px;          /* initial position */
+    left: 50%;           /* start horizontally centered */
+    transform: translateX(-50%); /* center horizontally */
+    width: 50%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 0;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Form container */
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* space between form fields */
+    font-family: Arial, sans-serif;
+}
+
+/* Labels */
+.modal-body label {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+/* Inputs, select, textarea */
+.modal-body input,
+.modal-body select,
+.modal-body textarea {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+.modal-body input[type="submit"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-body input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.status-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.status-table th, .status-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.status-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.status-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.thumbnail {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    transition: visibility 0s, opacity 0.5s linear;
+    opacity: 0;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}

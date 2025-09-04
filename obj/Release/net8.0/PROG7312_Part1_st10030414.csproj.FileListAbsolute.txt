@@ -1,0 +1,9 @@
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Release/net8.0/PROG7312_Part1_st10030414.csproj.AssemblyReference.cache
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Release/net8.0/PROG7312_Part1_st10030414.GeneratedMSBuildEditorConfig.editorconfig
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Release/net8.0/PROG7312_Part1_st10030414.AssemblyInfoInputs.cache
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Release/net8.0/PROG7312_Part1_st10030414.AssemblyInfo.cs
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Release/net8.0/PROG7312_Part1_st10030414.csproj.CoreCompileInputs.cache
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Release/net8.0/PROG7312_Part1_st10030414.MvcApplicationPartsAssemblyInfo.cache
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Release/net8.0/PROG7312_Part1_st10030414.RazorAssemblyInfo.cache
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Release/net8.0/PROG7312_Part1_st10030414.RazorAssemblyInfo.cs
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Release/net8.0/PROG7312_Part1_st10030414.sourcelink.json
