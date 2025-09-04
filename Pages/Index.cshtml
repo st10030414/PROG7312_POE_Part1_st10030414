@@ -1,0 +1,157 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="container">
+    <button class="card" onclick="openModal('reportModal')">
+        <img src="~/lib/report.png" alt="Report Icon" class="icon" width="100" height="100"/>
+        <p>Make Report</p>
+    </button>
+    <button class="card" onclick="openModal('emptyModal')">
+        <img src="~/lib/announce.png" alt="Announce Icon" class="icon" width="100" height="100"/>
+        <p>Announcements</p>
+    </button>
+    <button class="card" onclick="openModal('statusModal')">
+        <img src="~/lib/status.png" alt="Status Icon" class="icon" width="100" height="100"/>
+        <p>Status</p>
+    </button>
+</div>
+
+<div id="reportModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" onclick="closeModal('reportModal')">&times;</span>
+            <h2>Make Report</h2>
+        </div>
+        <div class="modal-body">
+            <form method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="Report.Location" required />
+                    <span asp-validation-for="Report.Location" class="text-danger"></span>
+                </div>
+                <div>
+                    <label for="reportType">Report:</label>
+                    <select name="Report.ReportType" id="reportType" required>
+                        <option value="" selected disabled>Select a report</option>
+                        <option value="Load shedding">Load Shedding</option>
+                        <option value="Pothole">Pothole</option>
+                        <option value="Water issues">Water Issues</option>
+                        <option value="Streetlights">Broken Streetlights</option>
+                    </select>
+                    <span asp-validation-for="Report.ReportType" class="text-danger"></span>
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="Report.Description" rows="3" required></textarea>
+                    <span asp-validation-for="Report.Description" class="text-danger"></span>
+                </div>
+                <div>
+                    <label for="attach">Select a file:</label>
+                    <input type="file" id="attach" name="Attachment" accept="image/*">
+                    <button type="button" id="clearImgBtn">Clear</button>
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                    <button type="button" onclick="closeModal('reportModal')">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="statusModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" onclick="closeModal('statusModal')">&times;</span>
+            <h2>Report Status</h2>
+        </div>
+        <div class="modal-body">
+            @if (Model.Reports == null || !Model.Reports.Any())
+            {
+                <p>No Reports Yet.</p>
+            }
+            else
+            {
+                <table class="status-table">
+                    <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Attachment</th>
+                    </tr>
+                    </thead>
+                    <tbody id="reportPage">
+                    @foreach (var report in Model.Reports)
+                    {
+                        <tr>
+                            <td>@report.Location</td>
+                            <td>@report.ReportType</td>
+                            <td>@(report.Description.Length > 15 ? report.Description.Substring(0, 15) + "..." : report.Description)</td>
+                            <td>@report.Status</td>
+                            <td>
+                                @if (report.Attachment != null && report.Attachment.Length > 0)
+                                {
+                                    var imageBase64 = Convert.ToBase64String(report.Attachment);
+                                    var imageSrc = $"data:image;base64, {imageBase64}";
+                                    <img src="@imageSrc" alt="Attachment" class="thumbnail"/>
+                                }
+                                else
+                                {
+                                    <span>No Image</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+                <div class="table-control">
+                    <button id="prevBtn" onclick="changePage(-1)">Previous</button>
+                    <span id="pageInfo"></span>
+                    <button id="nextBtn" onclick="changePage(1)">Next</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div id="emptyModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" onclick="closeModal('emptyModal')">&times;</span>
+            <h2>Feature Missing</h2>
+        </div>
+        <div class="modal-body">
+            <p>Will be implemented in future update!</p>
+        </div>
+    </div>
+</div>
+
+<div id="toast" class="toast"></div>
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            showToast("@Model.Message");
+        });
+    </script>
+}
+<script src="~/js/modals.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+

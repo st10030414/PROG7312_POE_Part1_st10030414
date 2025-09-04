@@ -1,0 +1,28 @@
+﻿@page
+@model PrivacyModel
+@{
+ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>PROG7312 Part 1 ST10030414</p>
+<br/>
+
+<div id="toast" class="toast"></div>
+
+<form method="post">
+    <button type="submit" onclick="return confirm('Are you sure? This will delete all reports!')">
+        Clear All Reports
+    </button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            showToast("@Model.Message");
+        });
+    </script>
+}
+
+<script src="~/js/modals.js"></script>
