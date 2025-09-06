@@ -36,28 +36,28 @@ body {
     gap: 20px;
     padding: 20px;
 }
-
+/*(W3 Schools, 2025)*/
 .card {
     gap: 20px;
 }
-
+/*(Mdn, 2025)*/
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
-    z-index: 1000; /* On top */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.5); /* semi-transparent background */
+    background-color: rgba(0,0,0,0.5);
 }
-
+/*(W3 Schools, 2025)*/
 .modal-content {
-    position: absolute; /* must be absolute for dragging */
-    top: 100px;          /* initial position */
-    left: 50%;           /* start horizontally centered */
-    transform: translateX(-50%); /* center horizontally */
+    position: absolute;
+    top: 100px;          
+    left: 50%;          
+    transform: translateX(-50%);
     width: 50%;
     max-width: 500px;
     background-color: #fff;
@@ -65,7 +65,7 @@ body {
     padding: 0;
 }
 
-
+/*(Mdn, 2025)*/
 .close {
     color: #aaa;
     float: right;
@@ -76,26 +76,26 @@ body {
     right: 15px;
     top: 10px;
 }
-
+/*(W3 Schools, 2025)*/
 .close:hover {
     color: #000;
 }
 
-/* Form container */
+/*(Mdn, 2025)*/
 .modal-body form {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* space between form fields */
+    gap: 10px; 
     font-family: Arial, sans-serif;
 }
+/*(W3 Schools, 2025)*/
 
-/* Labels */
 .modal-body label {
     font-weight: bold;
     margin-bottom: 2px;
 }
+/*(Mdn, 2025)*/
 
-/* Inputs, select, textarea */
 .modal-body input,
 .modal-body select,
 .modal-body textarea {
@@ -106,8 +106,8 @@ body {
     font-size: 14px;
     box-sizing: border-box;
 }
+/*(W3 Schools, 2025)*/
 
-/* Submit button */
 .modal-body input[type="submit"] {
     padding: 8px;
     border: none;
@@ -116,40 +116,40 @@ body {
     color: white;
     cursor: pointer;
 }
-
+/*(Mdn, 2025)*/
 .modal-body input[type="submit"]:hover {
     background-color: #0056b3;
 }
-
+/*(W3 Schools, 2025)*/
 .status-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
     font-size: 14px;
 }
-
+/*(Mdn, 2025)*/
 .status-table th, .status-table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
-
+/*(W3 Schools, 2025)*/
 .status-table th {
     background-color: #f4f4f4;
     font-weight: bold;
 }
-
+/*(Mdn, 2025)*/
 .status-table tr:nth-child(even) {
     background-color: #fafafa;
 }
-
+/*(W3 Schools, 2025)*/
 .thumbnail {
     max-width: 80px;
     max-height: 80px;
     border-radius: 4px;
     border: 1px solid #ccc;
 }
-
+/*(Mdn, 2025)*/
 .toast {
     visibility: hidden;
     min-width: 250px;
@@ -166,8 +166,31 @@ body {
     transition: visibility 0s, opacity 0.5s linear;
     opacity: 0;
 }
-
+/*(W3 Schools, 2025)*/
 .toast.show {
     visibility: visible;
     opacity: 1;
 }
+/*(W3 Schools, 2025)*/
+
+/*
+Reference List
+
+Geeks For Geeks. 2025. SQLite Tutorial, 23 July 2025. [Online]. Available at: https://www.geeksforgeeks.org/sqlite/sqlite-tutorial/ [Accessed 4 September 2025].
+
+Mdn. 2025. CSS styling basics, 2 September 2025. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics [Accessed 4 September 2025].
+
+Mdn. 2025. JavaScript, 8 July 2025. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript [Accessed 4 September 2025].
+
+W3 Schools. 2025. How TO - Snackbar / Toast, [n.d.]. [Online]. Available at: https://www.w3schools.com/howto/howto_js_snackbar.asp [Accessed 4 September 2025].
+
+W3 Schools. 2025. How TO - CSS/JS Modal, [n.d.]. [Online]. Available at: https://www.w3schools.com/howto/howto_css_modals.asp [Accessed 4 September 2025].
+
+W3 Schools. 2025. JavaScript Tutorial, [n.d.]. [Online]. Available at: https://www.w3schools.com/js/ [Accessed 4 September 2025].
+
+W3 Schools. 2025. CSS Introduction, [n.d.]. [Online]. Available at: https://www.w3schools.com/css/css_intro.asp [Accessed 4 September 2025].
+
+W3 Schools. 2025. HTML Tutorial, [n.d.]. [Online]. Available at: https://www.w3schools.com/Html/ [Accessed 4 September 2025].
+
+W3 Schools. 2025. C# Tutorial, [n.d.]. [Online]. Available at: https://www.w3schools.com/cs/index.php [Accessed 4 September 2025].
+*/

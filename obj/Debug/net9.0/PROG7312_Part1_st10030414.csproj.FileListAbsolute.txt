@@ -131,8 +131,6 @@
 /home/poke/RiderProjects/PROG7312_Part1_st10030414/bin/Debug/net9.0/runtimes/win-x86/native/e_sqlite3.dll
 /home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Debug/net9.0/PROG7312_Part1_st10030414.csproj.AssemblyReference.cache
 /home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Debug/net9.0/PROG7312.6074FE9F.Up2Date
-/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Debug/net9.0/compressed/gvyvrbmy2r-nmu6uehj4u.gz
-/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Debug/net9.0/compressed/wgtfa0wbdn-8q8gn5rrnq.gz
 /home/poke/RiderProjects/PROG7312_Part1_st10030414/bin/Debug/net9.0/out/web.config
 /home/poke/RiderProjects/PROG7312_Part1_st10030414/bin/Debug/net9.0/out/appsettings.Development.json
 /home/poke/RiderProjects/PROG7312_Part1_st10030414/bin/Debug/net9.0/out/appsettings.json
@@ -142,3 +140,5 @@
 /home/poke/RiderProjects/PROG7312_Part1_st10030414/bin/Debug/net9.0/out/PROG7312_Part1_st10030414.staticwebassets.endpoints.json
 /home/poke/RiderProjects/PROG7312_Part1_st10030414/bin/Debug/net9.0/package.json
 /home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Debug/net9.0/PROG7312_Part1_st10030414.sourcelink.json
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Debug/net9.0/compressed/wgtfa0wbdn-76ajv8e9fd.gz
+/home/poke/RiderProjects/PROG7312_Part1_st10030414/obj/Debug/net9.0/compressed/gvyvrbmy2r-jc2ghln3ab.gz

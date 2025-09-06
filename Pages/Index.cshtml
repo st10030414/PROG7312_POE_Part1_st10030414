@@ -9,14 +9,17 @@
     <button class="card" onclick="openModal('reportModal')">
         <img src="~/lib/report.png" alt="Report Icon" class="icon" width="100" height="100"/>
         <p>Make Report</p>
+        <!--(W3 Schools, 2025)-->
     </button>
     <button class="card" onclick="openModal('emptyModal')">
         <img src="~/lib/announce.png" alt="Announce Icon" class="icon" width="100" height="100"/>
         <p>Announcements</p>
+        <!--(W3 Schools, 2025)-->
     </button>
     <button class="card" onclick="openModal('statusModal')">
         <img src="~/lib/status.png" alt="Status Icon" class="icon" width="100" height="100"/>
         <p>Status</p>
+        <!--(W3 Schools, 2025)-->
     </button>
 </div>
 
@@ -24,7 +27,8 @@
     <div class="modal-content">
         <div class="modal-header">
             <span class="close" onclick="closeModal('reportModal')">&times;</span>
-            <h2>Make Report</h2>
+            <h2>Make Report to Improve Our Community</h2>
+            <!--(W3 Schools, 2025)-->
         </div>
         <div class="modal-body">
             <form method="post" enctype="multipart/form-data">
@@ -32,6 +36,7 @@
                     <label for="location">Location:</label>
                     <input type="text" id="location" name="Report.Location" required />
                     <span asp-validation-for="Report.Location" class="text-danger"></span>
+                    <!--(W3 Schools, 2025)-->
                 </div>
                 <div>
                     <label for="reportType">Report:</label>
@@ -42,22 +47,26 @@
                         <option value="Water issues">Water Issues</option>
                         <option value="Streetlights">Broken Streetlights</option>
                     </select>
+                    <!--(W3 Schools, 2025)-->
                     <span asp-validation-for="Report.ReportType" class="text-danger"></span>
                 </div>
                 <div>
                     <label for="description">Description:</label>
                     <textarea id="description" name="Report.Description" rows="3" required></textarea>
                     <span asp-validation-for="Report.Description" class="text-danger"></span>
+                    <!--(W3 Schools, 2025)-->
                 </div>
                 <div>
                     <label for="attach">Select a file:</label>
                     <input type="file" id="attach" name="Attachment" accept="image/*">
                     <button type="button" id="clearImgBtn">Clear</button>
+                    <!--(W3 Schools, 2025)-->
                 </div>
                 <div>
                     <input type="submit" value="Submit">
                     <button type="button" onclick="closeModal('reportModal')">Cancel</button>
                 </div>
+                <!--(W3 Schools, 2025)-->
             </form>
         </div>
     </div>
@@ -67,8 +76,9 @@
     <div class="modal-content">
         <div class="modal-header">
             <span class="close" onclick="closeModal('statusModal')">&times;</span>
-            <h2>Report Status</h2>
+            <h2>Current Status of Reports for Improving Our Communities</h2>
         </div>
+        <!--(W3 Schools, 2025)-->
         <div class="modal-body">
             @if (Model.Reports == null || !Model.Reports.Any())
             {
@@ -84,6 +94,7 @@
                         <th>Description</th>
                         <th>Status</th>
                         <th>Attachment</th>
+                        <!--(W3 Schools, 2025)-->
                     </tr>
                     </thead>
                     <tbody id="reportPage">
@@ -93,19 +104,23 @@
                             <td>@report.Location</td>
                             <td>@report.ReportType</td>
                             <td>@(report.Description.Length > 15 ? report.Description.Substring(0, 15) + "..." : report.Description)</td>
+                            <!--(W3 Schools, 2025)-->
                             <td>@report.Status</td>
+                            <!--(W3 Schools, 2025)-->
                             <td>
                                 @if (report.Attachment != null && report.Attachment.Length > 0)
                                 {
                                     var imageBase64 = Convert.ToBase64String(report.Attachment);
                                     var imageSrc = $"data:image;base64, {imageBase64}";
                                     <img src="@imageSrc" alt="Attachment" class="thumbnail"/>
+                                    <!--(W3 Schools, 2025)-->
                                 }
                                 else
                                 {
                                     <span>No Image</span>
                                 }
                             </td>
+                            <!--(W3 Schools, 2025)-->
                         </tr>
                     }
                     </tbody>
@@ -114,6 +129,7 @@
                     <button id="prevBtn" onclick="changePage(-1)">Previous</button>
                     <span id="pageInfo"></span>
                     <button id="nextBtn" onclick="changePage(1)">Next</button>
+                    <!--(W3 Schools, 2025)-->
                 </div>
             }
         </div>
@@ -122,36 +138,51 @@
 
 <div id="emptyModal" class="modal">
     <div class="modal-content">
+        <!--(W3 Schools, 2025)-->
         <div class="modal-header">
             <span class="close" onclick="closeModal('emptyModal')">&times;</span>
-            <h2>Feature Missing</h2>
+            <h2>Feature To Be Implemented</h2>
+            <!--(W3 Schools, 2025)-->
         </div>
         <div class="modal-body">
-            <p>Will be implemented in future update!</p>
+            <p>Will be implemented in future update, tune in for efforts towards making a better tommorow!</p>
+            <!--(W3 Schools, 2025)-->
         </div>
     </div>
 </div>
 
 <div id="toast" class="toast"></div>
+<!--(W3 Schools, 2025)-->
 @if (!string.IsNullOrEmpty(Model.Message))
 {
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             showToast("@Model.Message");
+            <!--(W3 Schools, 2025)-->
         });
     </script>
 }
 <script src="~/js/modals.js"></script>
+<!--(W3 Schools, 2025)-->
 
+<!--
+Reference List
 
+Geeks For Geeks. 2025. SQLite Tutorial, 23 July 2025. [Online]. Available at: https://www.geeksforgeeks.org/sqlite/sqlite-tutorial/ [Accessed 4 September 2025].
 
+Mdn. 2025. CSS styling basics, 2 September 2025. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics [Accessed 4 September 2025].
 
+Mdn. 2025. JavaScript, 8 July 2025. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript [Accessed 4 September 2025].
 
+W3 Schools. 2025. How TO - Snackbar / Toast, [n.d.]. [Online]. Available at: https://www.w3schools.com/howto/howto_js_snackbar.asp [Accessed 4 September 2025].
 
+W3 Schools. 2025. How TO - CSS/JS Modal, [n.d.]. [Online]. Available at: https://www.w3schools.com/howto/howto_css_modals.asp [Accessed 4 September 2025].
 
+W3 Schools. 2025. JavaScript Tutorial, [n.d.]. [Online]. Available at: https://www.w3schools.com/js/ [Accessed 4 September 2025].
 
+W3 Schools. 2025. CSS Introduction, [n.d.]. [Online]. Available at: https://www.w3schools.com/css/css_intro.asp [Accessed 4 September 2025].
 
+W3 Schools. 2025. HTML Tutorial, [n.d.]. [Online]. Available at: https://www.w3schools.com/Html/ [Accessed 4 September 2025].
 
-
-
-
+W3 Schools. 2025. C# Tutorial, [n.d.]. [Online]. Available at: https://www.w3schools.com/cs/index.php [Accessed 4 September 2025].
+-->
